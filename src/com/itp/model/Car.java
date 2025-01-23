@@ -20,6 +20,13 @@ public class Car {
 		this.gear = gear;
 	}
 
+	
+	public Car(int carModelYear, String carColor, String carModelName, String carMfgName) {
+		this.carModelYear = carModelYear;
+		this.carColor = carColor;
+		this.carModelName = carModelName;
+		this.carMfgName = carMfgName;
+	}
 	public int getCarModelYear() {
 		return carModelYear;
 	}
