@@ -1,5 +1,8 @@
 package com.itp.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class Car {
 	
 	private int carModelYear;
@@ -7,8 +10,16 @@ public class Car {
 	private String carModelName;
 	private String carMfgName;
 	
-	private Engine engine;
+	@Autowired							//default byType
+	@Qualifier("apple")                //byName
+	private Engine e2;
+	
+	@Autowired							//default byType
+	@Qualifier("banana") 
 	private Gear gear;
+	
+	@Autowired
+	private MusicSystem musicSystem;
 	
 	public Car() {}
 	public Car(int carModelYear, String carColor, String carModelName, String carMfgName, Engine engine, Gear gear) {
@@ -16,7 +27,7 @@ public class Car {
 		this.carColor = carColor;
 		this.carModelName = carModelName;
 		this.carMfgName = carMfgName;
-		this.engine = engine;
+		this.e2 = engine;
 		this.gear = gear;
 	}
 
@@ -60,11 +71,11 @@ public class Car {
 	}
 
 	public Engine getEngine() {
-		return engine;
+		return e2;
 	}
 
 	public void setEngine(Engine engine) {
-		this.engine = engine;
+		this.e2 = engine;
 	}
 
 	public Gear getGear() {
@@ -74,12 +85,13 @@ public class Car {
 	public void setGear(Gear gear) {
 		this.gear = gear;
 	}
-
 	@Override
 	public String toString() {
 		return "Car [carModelYear=" + carModelYear + ", carColor=" + carColor + ", carModelName=" + carModelName
-				+ ", carMfgName=" + carMfgName + ", engine=" + engine + ", gear=" + gear + "]";
+				+ ", carMfgName=" + carMfgName + ", e2=" + e2 + ", gear=" + gear + ", musicSystem=" + musicSystem + "]";
 	}
+
+	
 	
 	
 

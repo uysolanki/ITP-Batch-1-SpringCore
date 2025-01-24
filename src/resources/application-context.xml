@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns:context="http://www.springframework.org/schema/context"
@@ -9,7 +9,7 @@
 
    <context:annotation-config />
    
-    <bean id="engine" class="com.itp.model.Engine">    
+    <bean id="e1" class="com.itp.model.Engine">    
     <constructor-arg value="1500"></constructor-arg>
     <constructor-arg value="15"></constructor-arg>
     <constructor-arg value="Petrol"></constructor-arg>
@@ -58,11 +58,18 @@
     <constructor-arg value="Maruti"></constructor-arg>
     </bean>
     
-    <bean id="p1" class="com.itp.model.Player">  <!-- init-method="abc" destroy-method="xyz"> -->    
+    <bean id="c2" class="com.itp.model.Car">    
+    <constructor-arg value="2022"></constructor-arg>
+    <constructor-arg value="White"></constructor-arg>
+    <constructor-arg value="Swift"></constructor-arg>
+    <constructor-arg value="Maruti"></constructor-arg>
+    </bean>
+    
+    <bean id="p1" class="com.itp.model.Player">  init-method="abc" destroy-method="xyz">    
     <constructor-arg value="18"></constructor-arg>
     <constructor-arg value="Virat"></constructor-arg>
     <constructor-arg value="100"></constructor-arg>
     <constructor-arg value="9000"></constructor-arg>
     </bean>
     
-</beans>
+</beans> -->
